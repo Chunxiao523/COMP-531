@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+	<meta charset="utf-8">
+	<meta name="author" content="Chunxiao Zhang">
+	<title>Form processor</title>
+		<meta charset="utf-8">
+		<script>
+			function getValuesFromURL(){
+    			var url = window.location.search.substr(1).split("&"); 
+ 				var table = document.getElementById( "mytable");
+				table.rows[1].cells[1].innerText = url[0].split('=')[1]; //account
+				table.rows[2].cells[1].innerText = decodeURIComponent(url[1].split('=')[1]);//display name
+				table.rows[3].cells[1].innerText = decodeURIComponent(url[2].split('=')[1]);//email
+				table.rows[4].cells[1].innerText = url[3].split('=')[1];//phone
+				table.rows[5].cells[1].innerText = decodeURIComponent(url[4].split('=')[1]);//Birthday
+				table.rows[6].cells[1].innerText = url[5].split('=')[1];//zip
+				table.rows[7].cells[1].innerText = url[6].split('=')[1];//password
+				table.rows[8].cells[1].innerText = url[7].split('=')[1];//confirmed pw
+				var date = new Date(parseInt(url[8].split('=')[1]));
+				table.rows[9].cells[1].innerText = date;//time
+		}	
+		</script> 
+	</head>
+	<body onload="getValuesFromURL()">
+		<table id="mytable" border="1">
+		<tr>
+			<th>Key</th>
+			<th>Value</th>
+		</tr>
+		<tr>
+			<td>Account name</td>
+  			<td></td>
+		</tr>
+		<tr>
+			<td>Display name</td>
+  			<td></td>
+		</tr>
+		<tr>
+			<td>E-mail address</td>
+  			<td></td>
+		</tr>
+		<tr>
+			<td>Phone number</td>
+ 			 <td></td>
+		</tr>
+		<tr>
+			<td>Date of birth</td>
+  			<td></td>
+		</tr>
+		<tr>
+			<td>Zip code</td>
+  			<td></td>
+		</tr>
+		<tr>
+			<td>Password</td>
+  			<td></td>
+		</tr>
+		<tr>
+			<td>Password confirmed</td>
+  			<td></td>
+		</tr>
+		<tr>
+			<td>Timestamp</td>
+  			<td></td>
+		</tr>
+	</table>
+	</body>
+</html>

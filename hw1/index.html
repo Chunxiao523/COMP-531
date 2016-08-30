@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="author" content="Chunxiao Zhang">
+	<title>Index</title>
+	<body>
+		<form id="myForm" method="get" action="formprocessor.html">
+		<p>Account Name: <input type="text" name="name" placeholder="Account name" pattern="^[a-zA-Z][a-zA-Z0-9]+$" required></p>
+		<p>Display Name: <input type="text" name="name" placeholder="Display name" ></p>
+		<p>E-mail Address: <input type="email" name="email" placeholder="email address" required></p>
+		<p>Phone Number: <input type="tel" name="phone" placeholder="you can only input numbers 0-9" pattern="[0-9]*" required></p>
+		<p>Date of birth: <input type="date" name="birthday"  required></p>
+		<p>Zipcode: <input type="number" name="zipcode" pattern="/d/d/d/d/d" placeholder="#####" required></p>
+		<p>Password: <input type="password" name="pw" required></p>
+		<p>Password Confirmation: <input type="password" name="pwconfirm" required></p>
+		<input type="hidden" name="timestamp" >
+		<p><input type="submit" value="Submit" onclick="return doSomething()">
+		<input type="reset" value="Clear"></p>
+		</form>
+
+		<script>
+			function doSomething(){
+
+				document.getElementsByName("timestamp")[0].value=Date.now();
+				var pw1 = document.getElementsByName("pw")[0].value;
+				var pw2 = document.getElementsByName("pwconfirm")[0].value;
+				var startDate = document.getElementsByName("birthday")[0].value;
+				var birthday=new Date(startDate.replace(/-/g, "\/"));   
+				var d=new Date();   
+				var age = d.getFullYear()-birthday.getFullYear()-((d.getMonth()<birthday.getMonth()|| d.getMonth()==birthday.getMonth() && d.getDate()<birthday.getDate())?1:0);  
+
+				if(age<18){
+					alert("you cannot register since you are under 18");
+					return false;
+				}
+				if(pw1!=pw2){
+					window.alert("Please confirm your password");
+					return false;
+				}else{
+					submit();
+				}
+			}
+		</script> 
+	</body>
+</html>
