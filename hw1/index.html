@@ -13,7 +13,7 @@
 		<p>*E-mail Address: <input type="email" name="email" placeholder="email address" required>You shoule input valid email address, such as a@b.co</p>
 		<p>*Phone Number: <input type="tel" name="phone" placeholder="input numbers 0-9" pattern="[0-9]*" required> You can only type in numbers.</p>
 		<p>*Date of birth: <input type="date" name="birthday" required>Only people elder than 18 can register.</p>
-		<p>*Zipcode: <input type="number" name="zipcode" min=10000 max=99999 placeholder="#####" required>Please input 5 digits zipcode.</p>
+		<p>*Zipcode: <input type="number" name="zipcode" placeholder="#####" required>Please input 5 digits zipcode.</p>
 		<p>*Password: <input type="password" name="pw" required>Input your password</p>
 		<p>*Password Confirmation: <input type="password" name="pwconfirm" required>Please confirm your password</p>
 		<input type="hidden" name="timestamp" >
@@ -27,6 +27,7 @@
 			document.getElementsByName("timestamp")[0].value=Date.now();
 			var name = document.getElementsByName("name")[0].value;
 			var email = document.getElementsByName("email")[0].value;
+			var zipcode = document.getElementsByName("zipcode")[0].value;
 			var pw1 = document.getElementsByName("pw")[0].value;
 			var pw2 = document.getElementsByName("pwconfirm")[0].value;
 			var startdate = document.getElementsByName("birthday")[0].value;
@@ -36,6 +37,11 @@
 
 			if(!/^[a-zA-Z][a-zA-Z0-9]+$/i.test(name)) {
         		alert("Account name can only be upper or lower case letters and numbers, but may not start with a number. Please input your account name again.");
+        		return false;
+    		}
+
+    		if(zipcode.length!=5){
+    			alert("Length of zipcode should be 5.");
         		return false;
     		}
 

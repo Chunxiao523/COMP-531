@@ -40,9 +40,8 @@
 	var indicator = 15;
 	document.getElementById("indicator").innerHTML=indicator;
 	setTimeout(function(){ alert("The page will redirect when the counter reaches zero."); }, 5000);
-
-	var clockfunction =function change()
-	{
+	
+	var clockfunction = function change(){
   		indicator=indicator-1;
  
  		if(indicator>-1)
@@ -55,11 +54,8 @@
  			 window.location.href="http://www.clear.rice.edu/comp431/sample/hello.html"; 
  		}
 	}	
+	var clock =setInterval(clockfunction,1000);
 	
-	
-	var clock =setInterval(clockfunction,1500);
-
-
 	function cleartext(){
 		document.getElementsByName("textArea")[0].value="";
 	}
@@ -69,8 +65,9 @@
 	}
 
 	function resume(){
+		clearInterval(clock);
 		indicator = 15;
-		var clock =setInterval(clockfunction,1500);
+		var clock =setInterval(clockfunction,1000);
 	}
 	
 </script>
