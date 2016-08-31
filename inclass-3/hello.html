@@ -37,7 +37,9 @@
 
 <script type="text/javascript">
 
+	var flag = false;
 	var indicator = 15;
+	var clock;
 	document.getElementById("indicator").innerHTML=indicator;
 	setTimeout(function(){ alert("The page will redirect when the counter reaches zero."); }, 5000);
 	
@@ -54,7 +56,8 @@
  			 window.location.href="http://www.clear.rice.edu/comp431/sample/hello.html"; 
  		}
 	}	
-	var clock =setInterval(clockfunction,1000);
+	
+	clock =setInterval(clockfunction,1000);
 	
 	function cleartext(){
 		document.getElementsByName("textArea")[0].value="";
@@ -62,14 +65,18 @@
 
 	function pause(){
 		clearInterval(clock);
+		flag = false;
 	}
 
 	function resume(){
+		//if(flag == false){
 		clearInterval(clock);
 		indicator = 15;
-		var clock =setInterval(clockfunction,1000);
+		clock =setInterval(clockfunction,1000);
+		//flag = true;
+		//}
 	}
 	
 </script>
 </body>
-</html>
+</html>	
