@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<meta name="author" content="Chunxiao Zhang">
+	<title>Inclass_2</title>
+</head>
+	<body>
+		<p> <input id="btn" type="button" value="Click Me" style="position : absolute"></p>
+		<div id="hidden" class="div" style="display: none; background-color: rgb(55,200, 55); width: 100px; border: 5px solid red;padding: 25px; border-radius: 10px; margin: 25px;">
+			<p style="color: blue; text-align: center; ">Congratulations!</p>
+    		<p style="color: rgb(55,55, 200); text-align: center; ">You win!</p>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+	var flag = true;
+	window.onload = function(){
+		var Btn = document.getElementById("btn");
+		Btn.addEventListener("mouseover", MouseOver, false);
+		function MouseOver(){
+			if (event.shiftKey==1) {
+			}
+			else
+			{
+				Btn.style.position = "absolute";
+				Btn.style.left = Math.ceil(Math.random()*600)+"px";
+				Btn.style.top =Math.ceil(Math.random()*300)+"px";
+			}
+		} 
+
+		Btn.addEventListener("click", MouseClick, false);
+		function MouseClick(){ 
+			if(flag == true){
+				document.getElementById("hidden").style.display = "";
+				Btn.removeEventListener("mouseover",MouseOver);
+				Btn.innerText = "Play Again";	
+				flag = false;
+			}else if(flag == false){
+				document.getElementById("hidden").style.display = "none";
+				Btn.addEventListener("mouseover", MouseOver, false);
+				Btn.innerText = "Click Me";	
+				flag = true;
+			}		
+		}
+	}
+	</script>
+</html>
