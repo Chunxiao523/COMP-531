@@ -1,0 +1,21 @@
+/* Add some padding inside the card container */
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    width:400px;  
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+
+#img{
+	width:30%
+}
+#card-title{
+	text-align: center
+}
+#mytable{
+	text-align: center;
+}
+
