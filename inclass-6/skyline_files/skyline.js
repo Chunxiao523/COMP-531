@@ -1,6 +1,11 @@
 'use strict'
 
 var createApp = function(canvas) { 
+	canvas.onmousedown = function grow(e){
+		 var x = e.clientX - canvas.offsetLeft;
+         var y = e.clientY - canvas.offsetTop;
+
+	}
 	var c = canvas.getContext("2d");
 
 	// Create the ground
@@ -9,7 +14,7 @@ var createApp = function(canvas) {
 	grad.addColorStop(0, "green")
 	grad.addColorStop(1, "black")
 	c.fillStyle=grad
-	c.fillRect(0, floor, canvas.width, canvas.height/2)
+	c.fillRect(0, floor, canvas.width, canvas.height)
 
 	// common size for windows
 	var windowSpacing = 2, floorSpacing = 3
@@ -19,20 +24,24 @@ var createApp = function(canvas) {
 	var blgColors = [ 'red', 'blue', 'gray', 'orange'] 
 
 	//build a building
-	var build = function() { 
+	var build = function(x, y) { 
 		var x0 = Math.random()*canvas.width
 		var blgWidth = (windowWidth+windowSpacing) * Math.floor(Math.random()*10)
 		var blgHeight = Math.random()*canvas.height/2
-
-		c.fillStyle= blgColors[ Math.floor(Math.random()*blgColors.length)]
+		var blgColor = blgColors[ Math.floor(Math.random()*blgColors.length)]
+		c.fillStyle = blgColor
 		c.fillRect(x0, floor - blgHeight, blgWidth, blgHeight)
 		c.fillStyle="yellow"
-		for (var y = floor - floorSpacing; y > floor - blgHeight; y -= floorSpacing + windowHeight) {
-			for (var x = windowSpacing; x < blgWidth - windowWidth; x += windowSpacing + windowWidth) {
+
+		var N = blgWidth / (windowWidth + windowSpacing)
+		for (var y = floor - floorSpacing; y > floor - blgHeight; y -= (floorSpacing + windowHeight)) {
+			for (var x =Math.random()*N * windowSpacing; x < blgWidth - windowWidth; x += (Math.floor(Math.random() * N)) * (windowSpacing + windowWidth)) {		
 				c.fillRect(x0 + x, y - windowHeight, windowWidth, windowHeight)
 			}
 		}
 	}
+
+	
 
 	return {
 		build: build
@@ -41,7 +50,9 @@ var createApp = function(canvas) {
 
 window.onload = function() {
 	var app = createApp(document.querySelector("canvas"))
+	//var canvas = document.getElementById("canvas")
 	document.getElementById("build").onclick = app.build
+	//canvas.onmousedown = app.grow
 }
 
 
