@@ -37,7 +37,7 @@
             var map = {};
             var key;
             var value;
-            for (var i = 0; i < r.articles.length; i++){
+            for (var i = 0; i < r.articles.length; i++) {
                 key = r.articles[i]._id;  
                 value = r.articles[i].text.split(" ").length;  
                 map[key] = value; 
@@ -54,24 +54,23 @@
     });
     }
 
-    function getLargest(url) {
-        
-      fetch(url).then(r => r.json()).then(r => lfunction(r))
-        }
+    function getLargest(url) {   
+         return fetch(url).then(r => r.json()).then(r => lfunction(r))
+    }
 
-    function lfuntion(r){
-            var map{};
+    function lfunction(r){
             var max = 0;
-            for(int i = 0; i < r.size(); i++){
-                var key = r.articles[i]._id;  
-                var value = r.articles[i].text; 
-                if (r.articles[i].text.length > max) 
-                {
+            var id ;
+            var key;
+            var value;
+            for(var i = 0; i < r.articles.length; i++) {
+                key = r.articles[i]._id;  
+                if (r.articles[i].text.split(" ").length > max) {
                     id = r.articles[i]._id;
-                    max = r.articles[i].text.length;
+                    max = r.articles[i].text.split(" ").length;
                 }
             }
-            return id;
+             return String(id);
         }
 
     exports.inclass = {
