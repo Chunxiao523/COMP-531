@@ -48,10 +48,15 @@
 
 
     function countWordsSafe(url) {
-    var map = {};
-      fetch(url).then(r => r.json()).catch(function(err) {
-        return map;
-    });
+       
+       // return fetch(url).then(r => r.json()).then(r => efunction(r))
+
+       return fetch(url).then(r => r.json()).then(r => afunction(r)).catch(e => efunction())
+    }
+
+    function efunction(){
+        var map = {};
+            return map;
     }
 
     function getLargest(url) {   
