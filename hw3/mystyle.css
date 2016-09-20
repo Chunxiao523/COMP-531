@@ -17,7 +17,7 @@
 	margin: 0 auto;
 }
 .headline{
-	height:20px;
+	height:60px;
 	margin-right: 25px;
 	margin-bottom: 10px;
 	text-align:right;
@@ -79,7 +79,7 @@
 }
 .follower{
 	position: relative;
-	width:300px;
+	width:265px;
 	height:70px;
     left: 50%;
 	margin-bottom: 10px;
@@ -110,6 +110,7 @@
 }
 .editbutton{
 	text-align: right;
+	margin-bottom: 5px;
 }
 .img{
 	display:block; 
@@ -117,21 +118,29 @@
 	width:300px;
 }
 .follower_icon{
-	height:40px;
     width:40px;
 	/*margin-left: 10px;*/
     margin-top: 10px;
 	float: left;
+	position: absolute;
+  	top: 50%;
+  	transform: translate(0%, -75%);
 	/*margin: 10px;*/
 }
 .follower_information{
-	height:50px;
 	width:130px;
 	margin-left: 10px;
     margin-top: 10px;
 	float: left;
-	line-height: 40%;
-	text-align: left;
+	text-align: left;    
+	line-height: 40%;      
+    position: absolute;
+  	top: 45%;
+  	left: 45%;
+  	transform: translate(-50%, -50%);
+}
+.unfollow{
+  	transform: translate(35%, 30%);
 }
 /*Profile page*/
 .peofile{
