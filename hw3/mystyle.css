@@ -1,0 +1,177 @@
+	body{
+		font-size: 62.5%;
+		font-family: arial,sans-serif;
+	}
+		#websiteTitle{
+			font-size: 10em;
+			vertical-align:middle;
+			font-family: 'Pacifico', cursive;
+			padding-left: 15px;
+			color:#191970;
+
+		}
+
+.container{
+	width:1400px;
+	height:500px;
+	margin: 0 auto;
+}
+.headline{
+	height:20px;
+	margin-right: 25px;
+	margin-bottom: 10px;
+	text-align:right;
+}
+.mainFrame{
+	width:800px;
+	left: 50%;
+	margin-left: 250px;
+/*	margin-top: 30px;*/
+}
+/*welcome page*/
+.welcome{
+	width:100px;
+	height:35px;
+	margin: 0 auto;
+}
+.welcomeinformation{
+	display: -webkit-flex;
+    -webkit-align-items: center;
+    align-items: center;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+	width:350px;
+	height:600px;
+    margin-left: 50px;
+	float:left;
+}
+.table{
+}
+/*Main page*/
+.jumbotron{
+
+}
+.moments{
+	width:800px;
+	float:left;
+}
+.card{
+    width:350px;  
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: white;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.sidebar{
+	width: 300px;
+	height: 400px;
+	margin-top: 10px;
+	margin-right: 25px;
+	float:right;
+	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.add{
+	margin-top: 5px;
+	margin-left: 5px;
+}
+.follower{
+	position: relative;
+	width:300px;
+	height:70px;
+    left: 50%;
+	margin-bottom: 10px;
+	margin-left:-135px;
+	/*text-align: center;*/
+}
+.icon{
+	height:100px;
+    width:100px;
+	margin-left: 10px;
+    margin-top: 10px;
+	float: left;
+	margin: 10px
+}
+#icon{
+	width: 100%;
+}
+.information{
+    width:150px;
+    height:100px;
+	margin: 10px;
+	float:left;
+}
+.content{
+	 margin-left:15px;
+	 margin-right: 15px;
+	 text-align: justify;
+}
+.editbutton{
+	text-align: right;
+}
+.img{
+	display:block; 
+	margin:0 auto;
+	width:300px;
+}
+.follower_icon{
+	height:40px;
+    width:40px;
+	/*margin-left: 10px;*/
+    margin-top: 10px;
+	float: left;
+	/*margin: 10px;*/
+}
+.follower_information{
+	height:50px;
+	width:130px;
+	margin-left: 10px;
+    margin-top: 10px;
+	float: left;
+	line-height: 40%;
+	text-align: left;
+}
+/*Profile page*/
+.peofile{
+	width:90%;
+		vertical-align: center;
+}
+.profile_picture_region{
+	height: 600px;
+	margin-top: 25px;
+	margin-left: 50px;
+	margin-right: auto;
+	float: left;
+	/*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+}
+.current_profile{
+	height: 600px;
+	float:left;
+	margin-top: 25px;
+	margin-left:50px;
+	margin-right: auto;
+
+	/*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+}
+.update_profile{
+	height: 600px;
+	float: left;
+	margin-top: 25px;
+	margin-left:50px;
+	margin-right: 50px;
+	vertical-align: center;
+	/*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+}
+
+.profile_picture{
+	height: 300px;
+	width: 300px;
+	margin-left: 20px;
+}
+.update_button{
+	style="text-align: right;"
+}
+
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<title>Profile Page</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type="text/css">
+	<meta name="author" content="Chunxiao Zhang">
+	</head>
+	<body>
+	<div class="container">
+	<nav class="navbar">
+        <div class="headline"> 
+			<a href="main.html">Home page</a> 
+		</div>
+    </nav>
+	<div id="content" class="row-fluid">
+        <div class="col-md-4">
+          <div class="profile_picture_region">
+				<div class="profile_picture"><img id="icon" src="profile_image.png" alt="Avatar"></div>
+				<div class="update_button" style="text-align: right"> 
+                    <button type="file" class="btn btn-default btn-sm">
+                            <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+                             Change the icon
+                    </button> 
+                 </div>
+			</div>
+        </div>
+        <div class="col-md-4">
+           <table class="table-hover">
+					<tr>
+						<td colspan="2" style="text-align: center"><h3><p>Current Information</p></h3></td>
+  						<td></td>
+					</tr>
+					<tr>
+						<td class="col-md-6">Display name: </td>
+  						<td><p id="curname">Chunxiao</p></td>
+					</tr>
+					<tr>
+						<td class="col-md-6">E-mail address: </td>
+						<td><p id="curaddress">cz31@rice.edu</p></td>
+					</tr>
+					<tr>
+						<td class="col-md-6">Phone number: </td>
+						<td><p id="curphone">12812364270</p></td>
+					</tr>
+					<tr>
+						<td class="col-md-6">Date of Birth: </td>
+						<td><p id="curpw">23-05-1994</p></td>
+					</tr>
+					<tr>
+						<td class="col-md-6">Zip code: </td>
+						<td><p id="curzip">77005</p></td>		
+					</tr>
+				</table>
+        </div>
+        <div class="col-md-4">
+           <table  class="table-hover">
+					<tr>
+						<td colspan="2" style="text-align: center"><h3><p>Change profile value</p></h3></td>
+  						<td></td>
+					</tr>
+					<tr>
+						<td class="col-md-6"><p>Display name: </p></td>
+  						<td><input type="text" id="name"></td>
+					</tr>
+					<tr>
+						<td class="col-md-6"><p>E-mail address: </p></td>
+  						<td><input type="text" id="address"></td>
+					</tr>
+					<tr>
+						<td class="col-md-6"><p>Phone number: </p></td>
+ 						<td><input type="text" id="phone"></td>
+					</tr>
+					<tr>
+						<td class="col-md-6"><p>Zip code: </p></td>
+  						<td><input type="text" id="zip"></td> 			
+					</tr>
+					<tr>
+						<td colspan="2" class="text-center">
+						<td><div class="update_button" style="text-align: right"> 
+                    		<button type="file" class="btn btn-default btn-sm">
+                            	<span class="glyphicon glyphicon-saved" aria-hidden="true"></span>
+                            	Update
+                    		</button> 
+                 		</div></td>
+					</tr>
+				</table>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="profile.js"></script>
+	</body>
+	
+</html>
