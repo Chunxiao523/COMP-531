@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<title>Profile Page</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type="text/css">
+	<meta name="author" content="Chunxiao Zhang">
+	</head>
+	<body>
+	<div class="container">
+	<!-- This is the section of navigate bar -->
+		<nav class="navbar">
+        	<div class="headline" style="text-align: right"> 
+				<a href="main.html">Home page</a> 
+			</div>
+    	</nav>
+    <!-- This is the section for profile information  -->
+	<div>
+        <div class="col-md-4">
+       <!-- This is the section for the profile image information -->
+          <div class="profile_picture_region">
+				<div><img class="profile_icon" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQjl6-mUQe6PN17lBz6AGLG4BwfNVx62zvSsBzU5HKhRS9TfZPz" alt="Avatar"></div>
+				<div class="update_button" style="text-align: right"> 
+                    <input type="file" class="btn btn-default btn-sm">                  
+                 </div>
+			</div>
+        </div>
+        <div class="col-md-6">
+		<!-- This is the section for the current profile information-->
+        <div class="current_profile">
+           <table class="table-hover">
+					<tr>
+						<td colspan="2" style="text-align: center"><h3><p>Current Information</p></h3></td>
+  						<td></td>
+					</tr>
+					<tr>
+						<td class="col-md-6">Display name: </td>
+  						<td><p id="curname">Chunxiao</p></td>
+					</tr>
+					<tr>
+						<td class="col-md-6">E-mail address: </td>
+						<td><p id="curaddress">cz31@rice.edu</p></td>
+					</tr>
+					<tr>
+						<td class="col-md-6">Phone number: </td>
+						<td><p id="curphone">12812364270</p></td>
+					</tr>
+					<tr>
+						<td class="col-md-6">Date of Birth: </td>
+						<td><p id="curpw">23-05-1994</p></td>
+					</tr>
+					<tr>
+						<td class="col-md-6">Zip code: </td>
+						<td><p id="curzip">77005</p></td>		
+					</tr>
+				</table>
+        </div>
+        </div>
+        <div class="col-md-6">
+        <!-- This is the section to update the profile information -->
+        <div class="update_profile">
+           <table class="table-hover">
+					<tr>
+						<td colspan="2" style="text-align: center"><h3><p>Change profile value</p></h3></td>
+  						<td></td>
+					</tr>
+					<tr>
+						<td class="col-md-3"><p>Display name: </p></td>
+  						<td class="col-md-3"><input type="text" id="name"></td>
+					</tr>
+					<tr>
+						<td class="col-md-3"><p>E-mail address: </p></td>
+  						<td class="col-md-3"><input type="text" id="address"></td>
+					</tr>
+					<tr>
+						<td class="col-md-3"><p>Phone number: </p></td>
+ 						<td class="col-md-3"><input type="text" id="phone"></td>
+					</tr>
+					<tr>
+						<td class="col-md-3"><p>Zip code: </p></td>
+  						<td class="col-md-3"><input type="text" id="zip"></td> 			
+					</tr>
+					<tr>
+						<td colspan="2" >
+						<div class="update_button" style="text-align: right"> 
+                    		<button type="button" id="updateInformation" class="btn btn-default btn-sm">
+                            	<span class="glyphicon glyphicon-saved" aria-hidden="true"></span>
+                            	Update
+                    		</button> 
+                 		</div></td>
+					</tr>
+				</table>
+				</div>
+        </div>
+        </div>
+    </div>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="profile.js"></script>
+	</body>
+	
+</html>

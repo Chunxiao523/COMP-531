@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="mystyle.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Index</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<meta name="author" content="Chunxiao Zhang">
+</head>
+<body>
+
+<div class="container" style="height:600px" >
+	<div class="page-header text-center" id="websiteTitle">
+		<h1>Welcome</h1>
+	</div>
+	<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+	</div>
+	<!-- Register Field -->
+		<form class="register col-lg-4 col-md-4 col-sm-4 col-xs-4" method="get" action="main.html">
+			<table class="table-hover">
+			<tr>
+				<td colspan="2" style="text-align: center"><h4>New user? Register an account here!</h4></td>
+			</tr>
+			<tr>
+				<td class="col-md-6"><p>Account Name: </p></td> 
+				<td><input type="text" name="name" placeholder="Chunxiao Zhang" pattern="^[a-zA-Z][a-zA-Z0-9]+$" required></td>
+			</tr>
+			<tr>
+				<td class="col-md-6"><p>Display Name: </p></td>
+				<td><input type="text" name="disname" ></td>
+			</tr>
+			<tr>
+				<td class="col-md-6"><p>E-mail Address: </p></td>
+				<td><input type="email" name="email" placeholder="abc@rice.edu" required></td>
+			</tr>
+			<tr>
+				<td class="col-md-6"><p>Phone Number: </p></td>
+				<td><input type="tel" name="phone" placeholder="input numbers 0-9" pattern="[0-9]*" required></td>
+			</tr>
+			<tr>
+				<td class="col-md-6"><p>Date of birth: </p></td>
+				<td><input type="date" name="birthday" required></td>
+			</tr>
+			<tr>
+				<td class="col-md-6"><p>Zipcode: </p></td>
+				<td><input type="number" name="zipcode" placeholder="#####" required></td>
+			<tr>
+				<td class="col-md-6"><p>Password: </p></td>
+				<td> <input type="password" name="pw" required></td>
+			</tr>
+				<td class="col-md-6"><p>Password Confirmation: </p></td>
+				<td><input type="password" name="pwconfirm" required></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align: center" ><p>
+				<input type="submit" value="Submit" action="main.html" onclick ="return doSomething()">
+				<input type="reset" value="Clear"></p></td>
+			</tr>
+		</table>
+	</form>
+	<!-- Login Field -->
+	<div class="login col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
+		<table class="table-hover" >
+			<tr>
+				<td colspan="2" style="text-align: center"><h4>Have an account? Login here </h4></td>
+			</tr>
+			<tr>
+				<td class="col-md-6"><p>Account Name: </p></td>
+				<td><input type="text" name="nameLogin" placeholder="Account name" pattern="^[a-zA-Z][a-zA-Z0-9]+$" required></td>
+			</tr>
+			<tr>
+				<td class="col-md-6"><p>Password: </p></td>
+				<td><input type="password" name="pwLogin" required></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align: center"><p><button type="submit" onclick ="return logIn()">Login</button></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<script type="text/javascript" src = "index.js"></script>
+</body>
+</html>
