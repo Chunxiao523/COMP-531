@@ -32,6 +32,7 @@ var Btn = document.getElementById("button");
 
 
 window.onload=function(){
+	alert("hi");
 	for(var i = 0; i < 3; i++){
 		changing(i);
 	}

@@ -1,7 +1,7 @@
-<script>
-		function doSomething(){
+// This is the JS file for index.html
+// author:Chunxiao Zhang
 
-			document.getElementsByName("timestamp")[0].value=Date.now();
+		function doSomething(){ //Register validate and navigate function
 			var name = document.getElementsByName("name")[0].value;
 			var email = document.getElementsByName("email")[0].value;
 			var phone = document.getElementsByName("phone")[0].value;
@@ -14,34 +14,49 @@
 			var age = d.getFullYear()-birthday.getFullYear()-((d.getMonth()<birthday.getMonth()|| d.getMonth()==birthday.getMonth() && d.getDate()<birthday.getDate())?1:0);  
 
 			if(!/^[a-zA-Z][a-zA-Z0-9]+$/i.test(name)) {
-        		alert("Account name can only be upper or lower case letters and numbers, but may not start with a number. Please input your account name again.");
+        		popover("Account name can only be upper or lower case letters and numbers, but may not start with a number. Please input your account name again.");
         		return false;
     		}
 
     		if(!/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+$/i.test(email)) {
-        		alert("Please input a valid email address, such as a@b.co.");
+        		popover("Please input a valid email address, such as a@b.co.");
         		return false;
     		}
 
     		if(!/^[0-9]+$/i.test(phone)) {
-        		alert("Phone number can only be numbers. Please input your phone number again.");
+        		popover("Phone number can only be numbers. Please input your phone number again.");
         		return false;
     		}
 
-    		if(zipcode.length!=5){
-    			alert("Length of zipcode should be five numbers.");
-        		return false;
-    		}
-
-			if(age<18){
-				alert("you cannot register since you are under 18");
+    		if(age<18){
+				popover("you cannot register since you are under 18");
 				return false;
 			}
+
+    		if(zipcode.length!=5){
+    			popover("Length of zipcode should be five numbers.");
+        		return false;
+    		}
+
 			if(pw1!=pw2){
-				window.alert("Please confirm your password");
+				popover("Please confirm your password");
 				return false;
 			}else{
 				submit();
 			}
 		}
-	</script> 
+
+		function logIn() { //Login validate and navigate function 
+			var name = document.getElementsByName("nameLogin")[0].value;
+			var pw = document.getElementsByName("pwLogin")[0].value;
+			if (name.length == 0) {
+				popover("Please input your account name");
+			}
+			if (pw == "") {
+				popover("Please input your password");
+			} else {
+				 window.location.href='main.html';
+			}
+
+		}
+

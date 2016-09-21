@@ -6,30 +6,32 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width = device-width, initial-scale = 1">
 	<title>Profile Page</title>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type="text/css">
 	<meta name="author" content="Chunxiao Zhang">
 	</head>
 	<body>
 	<div class="container">
-	<nav class="navbar">
-        <div class="headline"> 
-			<a href="main.html">Home page</a> 
-		</div>
-    </nav>
-	<div id="content" class="row-fluid">
+	<!-- This is the section of navigate bar -->
+		<nav class="navbar">
+        	<div class="headline" style="text-align: right"> 
+				<a href="main.html">Home page</a> 
+			</div>
+    	</nav>
+    <!-- This is the section for profile information  -->
+	<div>
         <div class="col-md-4">
+       <!-- This is the section for the profile image information -->
           <div class="profile_picture_region">
-				<div class="profile_picture"><img id="icon" src="profile_image.png" alt="Avatar"></div>
+				<div><img class="profile_icon" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQjl6-mUQe6PN17lBz6AGLG4BwfNVx62zvSsBzU5HKhRS9TfZPz" alt="Avatar"></div>
 				<div class="update_button" style="text-align: right"> 
-                    <button type="file" class="btn btn-default btn-sm">
-                            <span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
-                             Change the icon
-                    </button> 
+                    <input type="file" class="btn btn-default btn-sm">                  
                  </div>
 			</div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
+		<!-- This is the section for the current profile information-->
+        <div class="current_profile">
            <table class="table-hover">
 					<tr>
 						<td colspan="2" style="text-align: center"><h3><p>Current Information</p></h3></td>
@@ -57,52 +59,46 @@
 					</tr>
 				</table>
         </div>
-        <div class="col-md-4">
-           <table  class="table-hover">
+        </div>
+        <div class="col-md-6">
+        <!-- This is the section to update the profile information -->
+        <div class="update_profile">
+           <table class="table-hover">
 					<tr>
 						<td colspan="2" style="text-align: center"><h3><p>Change profile value</p></h3></td>
   						<td></td>
 					</tr>
 					<tr>
-						<td class="col-md-6"><p>Display name: </p></td>
-  						<td><input type="text" id="name"></td>
+						<td class="col-md-3"><p>Display name: </p></td>
+  						<td class="col-md-3"><input type="text" id="name"></td>
 					</tr>
 					<tr>
-						<td class="col-md-6"><p>E-mail address: </p></td>
-  						<td><input type="text" id="address"></td>
+						<td class="col-md-3"><p>E-mail address: </p></td>
+  						<td class="col-md-3"><input type="text" id="address"></td>
 					</tr>
 					<tr>
-						<td class="col-md-6"><p>Phone number: </p></td>
- 						<td><input type="text" id="phone"></td>
+						<td class="col-md-3"><p>Phone number: </p></td>
+ 						<td class="col-md-3"><input type="text" id="phone"></td>
 					</tr>
 					<tr>
-						<td class="col-md-6"><p>Zip code: </p></td>
-  						<td><input type="text" id="zip"></td> 			
+						<td class="col-md-3"><p>Zip code: </p></td>
+  						<td class="col-md-3"><input type="text" id="zip"></td> 			
 					</tr>
 					<tr>
-						<td colspan="2" class="text-center">
-						<td><div class="update_button" style="text-align: right"> 
-                    		<button type="file" class="btn btn-default btn-sm">
+						<td colspan="2" >
+						<div class="update_button" style="text-align: right"> 
+                    		<button type="button" id="updateInformation" class="btn btn-default btn-sm">
                             	<span class="glyphicon glyphicon-saved" aria-hidden="true"></span>
                             	Update
                     		</button> 
                  		</div></td>
 					</tr>
 				</table>
+				</div>
+        </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-	
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"</script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="profile.js"></script>
 	</body>
