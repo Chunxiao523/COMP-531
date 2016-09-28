@@ -15,25 +15,12 @@ const Reducer = (state =  {
 				todo.id !== action.id
 				)})
 		case 'TOGGLE_TODO':
-		// var toggle = Object.assign({}, state, {todoItems: } );
-		// 	return toggle
-			// state.todoItems[action.id].done = true;
-			// return state
-			
-			 // return Object.assign({}, state, {todoItems: !state.todoItems.done})
+			return Object.assign ({}, state, 
+			{todoItems: [...state.todoItems.slice(0, action.id), Object.assign({}, state.todoItems[action.id], {done: !state.todoItems[action.id].done}), ...state.todoItems.slice(action.id + 1)]}); 
 		default: 
 			return state
 	}
-}
-const getVisibleTodos = (todos, filter) => {
-  switch (filter) {
-    case 'SHOW_ALL':
-      return todos
-    case 'SHOW_COMPLETED':
-      return todos.filter(t => t.completed)
-    case 'SHOW_ACTIVE':
-      return todos.filter(t => !t.completed)
-  }
+
 }
 
 
