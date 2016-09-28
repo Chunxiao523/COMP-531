@@ -8,7 +8,7 @@ const Reducer = (state =  {
 }, action) => {
 	switch(action.type) {
 		case 'ADD_TODO':
-			 var copy = Object.assign({}, state, {nextId: state.nextId ++},{todoItems: [...state.todoItems,{id: state.nextId, text: action.text, done: false}]} );
+			 var copy = Object.assign({}, state, {nextId: state.nextId ++},{todoItems: [...state.todoItems, {id: state.nextId, text: action.text, done: false}]} );
 			return copy
 		case 'REMOVE_TODO':
 			return Object.assign({}, state, {todoItems: state.todoItems.filter(todo => 
@@ -19,9 +19,22 @@ const Reducer = (state =  {
 		// 	return toggle
 			// state.todoItems[action.id].done = true;
 			// return state
+			
+			 // return Object.assign({}, state, {todoItems: !state.todoItems.done})
 		default: 
 			return state
 	}
 }
+const getVisibleTodos = (todos, filter) => {
+  switch (filter) {
+    case 'SHOW_ALL':
+      return todos
+    case 'SHOW_COMPLETED':
+      return todos.filter(t => t.completed)
+    case 'SHOW_ACTIVE':
+      return todos.filter(t => !t.completed)
+  }
+}
+
 
 export default Reducer
