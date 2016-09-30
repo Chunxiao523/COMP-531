@@ -1,0 +1,17 @@
+body{
+	background: #000000;
+}
+.container{
+	
+/*	background: #ff5722;*/
+}
+svg {
+	stroke:red;
+ /*   background-color: #f0f3f9;*/
+}
+frame{
+	
+}
+.getItem{
+	text-align: center;
+}
