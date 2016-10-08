@@ -1,25 +1,27 @@
 <!DOCTYPE  svg PUBLIC "-//W3C//DTD SVG 1.1//EN"  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="hex.js"></script>
+<script type="text/javascript" src="judge.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Hex Game</title>
 	<meta name="author" content="Chunxiao Zhang">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width = device-width, initial-scale = 1">
 	<link rel="stylesheet" type="text/css" href="hex.css" />	
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-  	<script type="text/javascript" src="pixi.js"></script>
-    <script type="text/javascript" src="hex.js"></script>
-     <script type="text/javascript" src="judge.js"></script>
 </head>
 <body>
-<div id="main">
+<div class="box">
+<canvas id="layer1" ></canvas>
+<canvas id="layer2" ></canvas>
+<canvas id="layer3" ></canvas>
+</div>
   <!-- <div id="svgWrapper">
 	<iframe src="background.svg" width="1300" height="530"></iframe>
   </div id="getItem">
   	<button id="showHEX">ShowHEX</button> -->
-  	<div id='score'>0</div>
- </div>
+<div id='score'>0</div>
 
 </body>
 </html>

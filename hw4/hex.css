@@ -1,17 +1,20 @@
 body{
-/*	background: #000000;*/
+	background: #000000;
 }
-.container{
-	
-/*	background: #ff5722;*/
+#layer1{
+	position: absolute;
+	z-index:-10000;
 }
-svg {
-	stroke:red;
- /*   background-color: #f0f3f9;*/
+#layer2{
+	position: absolute;
+	 z-index:0;
 }
-frame{
-	
+#layer3{
+	position: absolute;
+	z-index: 10000;
 }
-.getItem{
+#score{
 	text-align: center;
+	font-size: 40;
+	color: white;
 }
