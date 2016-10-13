@@ -59,9 +59,8 @@ function createPiece(layer, p, b) {
     }
     function doMouseUp() {
         window.removeEventListener("mouseup", doMouseUp, false);
-        //var bool = judgeGameOver( pieceObj.pieceArr);
-       var bool = false;
-   console.log(bool);
+        var bool = judgePiece( pieceObj.pieceArr);
+       //var bool = false;
         if (!bool) {
             if (dragging) {
             dragging = false;
@@ -93,13 +92,13 @@ function judgeGameOver(pieceArr){
 }
 function judgePiece (pieceArr) {
     var bool;
-    fieldArr.forEach(function(value, index) {
-        var mouseX = value[0];
-        var mouseY = value[1];
-        return bool = pieceArr.every(function (vf) { 
+    return bool = fieldArr.forEach(function(value, index) {
+        var mouseX = fieldX + value[0];
+        var mouseY = fieldX + value[1];
+        pieceArr.every(function (vf) { 
             var positionX = mouseX + vf[0];
             var positionY = mouseY + vf[1];
-            return fieldArr.some(function(v,i){
+            var bool2 = fieldArr.some(function(v,i){
                 if(((fieldX+v[0]-positionX)*(fieldX+v[0]-positionX) + (fieldY+v[1]-positionY)*(fieldY+v[1]-positionY)) <= 300 
                     && v[2] ==false) {
                         return false;
