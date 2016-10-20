@@ -1,5 +1,5 @@
 import React from 'react';
-import IndexPageLogin from "./IndexPageLogin.js";
+import Person from "./IndexPageLogin.js";
 import IndexPageSignup from "./IndexPageSignup.js";
 
 export default class IndexPageContainer extends React.Component {
@@ -7,8 +7,8 @@ export default class IndexPageContainer extends React.Component {
     return (
         <div className="container">
          Welcome
-         <IndexPageLogin/>
-         <IndexPageSignup/>
+      	<Person/>
+      	<IndexPageSignup/>
         </div>
         );
   }
