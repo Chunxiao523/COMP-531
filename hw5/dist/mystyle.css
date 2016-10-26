@@ -7,7 +7,7 @@ body{
 	vertical-align:middle;
 	font-family: 'Pacifico', cursive;
 	padding-left: 15px;
-	color:#191970;
+	color:#000000;
 }
 .container{
 	width:1400px;
@@ -17,19 +17,13 @@ body{
 	height:30px;
 	background-color: white;
 }
+#navIcon{
+	width: 30px;
+}
 /*welcome page*/
 .welcome{
 	width:100px;
 	height:35px;
-}
-.register{
-	float:left;
-	margin-left: 20px;    
-    position: absolute;
-  	left: 5%;
-  	transform: translate(-30%, 20%);
-  	background-color: white;
-	box-shadow: 0 12px 12px 4px rgba(0,0,0,0.5);
 }
 .login{
 	float:left;
@@ -37,6 +31,15 @@ body{
     position: absolute;
   	left: 5%;
   	transform: translate(-20%, 100%);
+  	background-color: white;
+	box-shadow: 0 12px 12px 4px rgba(0,0,0,0.5);
+}
+.signup{
+	float:left;
+	margin-left: 20px;    
+    position: absolute;
+  	left: 5%;
+  	transform: translate(-30%, 20%);
   	background-color: white;
 	box-shadow: 0 12px 12px 4px rgba(0,0,0,0.5);
 }
@@ -48,7 +51,7 @@ body{
 	width:800px;
 	float:left;
 }
-.card{
+#card{
     width:350px;  
     margin-left: 20px;
     margin-top: 10px;
@@ -56,7 +59,7 @@ body{
     float: left;
     box-shadow: 0 12px 12px 4px rgba(0,0,0,0.5);
 }
-.sidebar{
+#sidebar{
 	width: 300px;
 	height: 400px;
 	margin-top: 10px;
@@ -70,14 +73,13 @@ body{
 	margin-top: 5px;
 	margin-left: 5px;
 }
-.follower{
+#follower{
 	position: relative;
 	width:265px;
 	height:70px;
     left: 50%;
 	margin-bottom: 10px;
 	margin-left:-135px;
-	/*text-align: center;*/
 }
 .searchField{
 	text-align: left;
@@ -89,16 +91,14 @@ body{
 	background-color: white;
 	box-shadow: 0 12px 12px 4px rgba(0,0,0,0.5);
 }
-.icon{
-	height:100px;
-    width:100px;
+
+#icon{
+	height:90px;
+    width:90px;
 	margin-left: 10px;
     margin-top: 10px;
 	float: left;
 	margin: 10px
-}
-#icon{
-	width: 100%;
 }
 .information{
     width:150px;
@@ -106,7 +106,7 @@ body{
 	margin: 10px;
 	float:left;
 }
-.content{
+#content{
 	 margin-left:15px;
 	 margin-right: 15px;
 	 text-align: justify;
@@ -115,7 +115,7 @@ body{
 	text-align: right;
 	margin-bottom: 5px;
 }
-.img{
+#img{
 	display:block; 
 	margin:0 auto;
 	width:300px;

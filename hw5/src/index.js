@@ -4,9 +4,22 @@ require("bootstrap-webpack")
 
 import React from 'react'
 import { render } from 'react-dom'
-import IndexPageContainer from "./IndexPageContainer.js"
+import { Router, Route, browserHistory } from 'react-router';
 
-render(
-	<IndexPageContainer/>, document.getElementById('app')
-);
+import { Provider } from 'react-redux'
+import createLogger from 'redux-logger'
+import { createStore, applyMiddleware } from 'redux'
 
+import Index from "./Components/StartPage.js"
+import Main from "./Components/Main.js"
+import Profile from "./Components/Profile.js"
+import Reducer from "./reducers.js"
+
+const logger = createLogger()
+const store = createStore(Reducer, applyMiddleware(logger))
+
+render( <Provider store={store}>
+			<Index />
+		</Provider>, 
+		document.getElementById('app')
+)

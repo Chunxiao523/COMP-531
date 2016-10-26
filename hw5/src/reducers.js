@@ -1,22 +1,16 @@
 
-const Reducer = (state =  {
-	nextId: 2,
-	todoItems: [
-	    {id: 0, text: "This is an item", done: false},
-	    {id: 1, text: "Another item", done: false}
-	]
-}, action) => {
+const Reducer=(state={location:'START'}, action) =>{
 	switch(action.type) {
-		case 'ADD_TODO':
-		console.log('add a ???!', action)
-			// IMPLEMENT ME
-		case 'REMOVE_TODO':
-			// IMPLEMENT ME
-		case 'TOGGLE_TODO':
-			// IMPLEMENT ME
-		default: 
-			return state
+		case 'NAVINDEX' :
+			return {...state, location:'START'}
+		case 'NAVMAIN' :
+			return {...state, location:'MAIN'}
+		case 'NAVPROFILE' :
+			return {...state, location:'PROFILE'}
+		default:
+			return {...state}
 	}
 }
 
 export default Reducer
+
