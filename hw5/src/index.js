@@ -14,12 +14,12 @@ import Index from "./Components/StartPage.js"
 import Main from "./Components/Main.js"
 import Profile from "./Components/Profile.js"
 import Reducer from "./reducers.js"
-
+import App from "./app.js"
 const logger = createLogger()
 const store = createStore(Reducer, applyMiddleware(logger))
 
 render( <Provider store={store}>
-			<Index />
+			<App />
 		</Provider>, 
 		document.getElementById('app')
 )

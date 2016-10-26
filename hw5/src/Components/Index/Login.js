@@ -1,6 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-export const Login = () => {
+import {userlogin, navmain} from '../action.js'
+export const Login = ({dispatch}) => {
+      let username, password
+      return (
             <div class="login col-lg-4 col-md-4 col-sm-4 col-xs-4 ">
                   <table class="table-hover" >
                       <tr>
@@ -16,11 +19,12 @@ export const Login = () => {
                       </tr>
                       <tr>
                         <td co lspan="2"><p><button type="submit" onClick={()=>{
-                          dispatch(userlogin(username.value,password.value))
+                          dispatch(navmain())
                         }}>Login</button></p></td>
                       </tr>
                   </table>
             </div> 
+          )
 }
 
 export default connect()(Login)

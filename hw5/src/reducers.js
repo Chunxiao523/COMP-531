@@ -1,5 +1,6 @@
-
-const Reducer=(state={location:'START'}, action) =>{
+import { combineReducers } from 'redux'
+import Action from './Components/action.js'
+function navi(state = { location: 'START'}, action) {
 	switch(action.type) {
 		case 'NAVINDEX' :
 			return {...state, location:'START'}
@@ -11,6 +12,18 @@ const Reducer=(state={location:'START'}, action) =>{
 			return {...state}
 	}
 }
+function followers(state = { followers: {} }, action) {
+    switch(action.type) {
+       
+        default:
+            return state
+    }
+}
+const Reducer = combineReducers({
+    navi, followers
+})
 
 export default Reducer
+
+
 
