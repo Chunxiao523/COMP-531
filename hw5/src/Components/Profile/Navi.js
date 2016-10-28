@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux'
-import {navlanding, navprofile} from '../action.js'
+import {navlanding, navmain} from '../action.js'
 export const NavBar =({dispatch}) => {
         return (
         	<div class="navbar">
@@ -10,7 +10,7 @@ export const NavBar =({dispatch}) => {
 	        	<span id="status">Status: Enjoy life</span>    
 	        	<input type="text" id="newText"/>  
             	<button type="button" id="statusBtn" class="btn btn-default btn-sm">Update</button>
-                 <a href="#" onClick={() => { dispatch(navprofile()) }}>Profile</a>
+                 <a href="#" onClick={() => { dispatch(navmain()) }}>Home</a>
             	 <a href="#" onClick={() => { dispatch(navlanding()) }}>Logout</a>
         	</div>
    			 );

@@ -9,10 +9,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import { Provider } from 'react-redux'
 import createLogger from 'redux-logger'
 import { createStore, applyMiddleware } from 'redux'
-
-import Index from "./Components/StartPage.js"
-import Main from "./Components/Main.js"
-import Profile from "./Components/Profile.js"
+import { initialVisit } from './Components/action.js'
 import Reducer from "./reducers.js"
 import App from "./app.js"
 const logger = createLogger()

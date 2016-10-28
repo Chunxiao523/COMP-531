@@ -11,15 +11,15 @@ export const Login = ({dispatch}) => {
                       </tr>
                       <tr>
                         <td class="col-md-6"><p>Account Name: </p></td>
-                        <td><input type="text"  onChange={(e) => this.setState({username :e.target.value})} /></td>
+                        <td><input type="text" ref = {(node) => username = node} /></td>
                       </tr>
                       <tr>
                         <td class="col-md-6"><p>Password: </p></td>
-                        <td><input type="password"  onChange={(e) => this.setState({password :e.target.value})} /></td>
+                        <td><input type="password"  ref = {(node) => password = node} /></td>
                       </tr>
                       <tr>
                         <td co lspan="2"><p><button type="submit" onClick={()=>{
-                          dispatch(navmain())
+                          dispatch(userlogin(username.value, password.value), navmain())
                         }}>Login</button></p></td>
                       </tr>
                   </table>

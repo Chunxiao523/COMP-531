@@ -20,7 +20,7 @@ export const App = ({location}) => {
 export default connect(
 	(state) => {
 		return {
-			location: state.Reducer.location
+			location: state.navi.location
 		}
 	}
 )(App)
