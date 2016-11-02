@@ -73,5 +73,7 @@
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "mock-fetch": "https://www.clear.rice.edu/comp431/sample/mock-fetch.tgz"
+  }
 }

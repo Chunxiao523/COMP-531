@@ -1,46 +1,74 @@
 import { combineReducers } from 'redux'
-import Action from './actions'
-
-function navi(state = { error:'', success:'', location:'' }, action) {
-    const clean = { error: '', success: '' }
-    switch (action.type) {
-        case Action.SUCCESS:
-            return { ...state, ...clean, success: action.success }
-        case Action.ERROR:
-            return { ...state, ...clean, error: action.error }
-
-        case Action.NAV_PROFILE:
-            return { ...state, ...clean, location: 'PROFILE'}
-        case Action.NAV_MAIN:
-            return { ...state, ...clean, location: 'MAIN' }
-        case Action.NAV_OUT:
-            return { ...state, ...clean, location: 'START' }
-
+//reducers
+export function articles( state = {articles: {}, keyword: ''}, action) {
+    switch(action.type) {
+        case 'UPDATE_ARTICLES' :
+            return {...state, articles: action.articles}
+        case 'FILTER_ARTICLE':
+            return {...state,articles:action.articles,keyword:action.keyword}
+        case 'SEARCH_ARTICLE':
+            return {...state,keyword:action.keyword}
+        case 'LOGOUT':
+            return {articles:{},keyword:''}
         default:
-            return { ...state, ...clean }
+            return {...state};
     }
 }
 
-function profile(state = { username:'', headline: '', avatar: '', zipcode: '', email: '' }, action) {
+export function navi(state = { location:'START' }, action) {
     switch (action.type) {
+        case 'NAVPROFILE':
+            return { ...state, location: 'PROFILE'}
+        case 'NAVMAIN':
+            return { ...state, location: 'MAIN' }
+        case 'NAVINDEX':
+            return { ...state, location: 'START' }
+        default:
+            return { ...state}
+    }
+}
 
-        case Action.UPDATE_HEADLINE:
-        case Action.LOGIN_LOCAL:
+export function profile(state = { username:'', headline: '', avatar: '', zipcode: '', email: '' }, action) {
+    switch (action.type) {
+        case 'UPDATE_HEADLINE':
+            return { ...state, headline: action.headline }
+        case 'UPDATE_USER':
             return { ...state, username: action.username, headline: action.headline }
-
-        case Action.UPDATE_PROFILE:
+        case 'LOGIN_LOCAL':
+            return { ...state, username: action.username}
+        case 'UPDATE_PROFILE':
             if (action.headline) return { ...state, headline: action.headline }
             if (action.avatar) return { ...state, avatar: action.avatar }
             if (action.zipcode) return { ...state, zipcode: parseInt(action.zipcode) }
             if (action.email) return { ...state, email: action.email }
-
         default:
             return state
     }
 }
 
+
+export function followers(state = { follower: {} }, action) {
+    switch(action.type) {
+        case 'FOLLOWER_UPDATE':
+            return { ...state, follower: action.follower }
+        default:
+            return state
+    }
+}
+export const check = (state = {success:'',error:''}, action)=>{
+    switch(action.type){
+        case 'SUCCESS':
+            return {...state,success:action.success}
+        case 'ERROR':
+            return {...state,error:action.error}
+        case 'LOGOUT':
+            return {success:'',error:''}
+        default:
+            return {...state}
+    }
+}
 const Reducer = combineReducers({
-    navi, profile
+   navi, articles, profile, followers,check
 })
 
 export default Reducer

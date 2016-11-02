@@ -1,19 +1,32 @@
-import React, { Component, PropTypes } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
-import {navlanding, navprofile} from '../action.js'
-export const NavBar =({dispatch}) => {
+import {changestatus, userlogout, navprofile} from '../action.js'
+//the navigation bar in main page
+export const NavBar =({dispatch, avatar, username, headline}) => {
         return (
-        	<div class="navbar">
-	            <img id="navIcon"  
-	        		src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQjl6-mUQe6PN17lBz6AGLG4BwfNVx62zvSsBzU5HKhRS9TfZPz" 
-	        		alt="Avatar"/>Angel Zhang | 
-	        	<span id="status">Status: Enjoy life</span>    
-	        	<input type="text" id="newText"/>  
-            	<button type="button" id="statusBtn" class="btn btn-default btn-sm">Update</button>
+        	<div className="navbar">
+	            <img width="100%" id="navIcon"  
+	        		src={avatar} 
+	        		/>
+                    {username} | 
+	        	<span id="status">Status: {headline}</span>    
+	        	<input type="text" id="newText" ref = {(node) => headline = node}/>  
+
+            	<button type="button" id="statusBtn" 
+                onClick={() => {dispatch(changestatus(headline.value)) }} 
+                className="btn btn-default btn-sm">Update</button>
                  <a href="#" onClick={() => { dispatch(navprofile()) }}>Profile</a>
-            	 <a href="#" onClick={() => { dispatch(navlanding()) }}>Logout</a>
+            	 <a href="#" onClick={() => { dispatch(userlogout()) }}>Logout</a>
         	</div>
    			 );
 }
 
-export default connect()(NavBar)
+export default connect(
+    (state) => {
+        return {
+            avatar: state.profile.avatar,
+            username: state.profile.username,
+            headline: state.profile.headline
+        }
+    }
+)(NavBar)

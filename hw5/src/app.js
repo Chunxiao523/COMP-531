@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Profile from './Components/Profile.js'
 import Main from './Components/Main.js'
 import StartPage from './Components/StartPage.js'
+//routing component
 export const App = ({location}) => {
 	   let view
     switch(location) {
