@@ -78,12 +78,10 @@ const addArticle = (req, res) => {
 const register = (req, res) => {
 		if (!req.body.username) {
 			res.sendStatus(400)
-			res.send('you should provide your username')
 			return
 		}
 		if (!req.body.password) {
 			res.sendStatus(400)
-			res.send('you should provide your password')
 			return
 		}
 		console.log(req.body.username)
