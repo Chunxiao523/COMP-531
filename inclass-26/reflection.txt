@@ -1,0 +1,16 @@
+-What did you hope to learn but did not?
+I think we should have more detailed courses related to Javascript, as least some materials explaining how fileter, map, forEach work. They are fundemental and useful
+-What did you really enjoy in this course, and how?
+Working out the inclass assignments with the help of our sweet professor!
+And use the knowledge in inclass assignments to project.This part is interesting, we learn things in inclass assignments and use them in the project
+-What worked well in this course? and how?
+The inclass assignments are really useful
+-What did not work well in the course and how might it be improved?
+TA sessions...Also I think you should give suggestions to windows user, install Ubuntu system, in this case, both of us can have an easier life.
+I think you should give us more teaching materials, because at first I didn't have any experience in web development, I spent large amount of time on figuring out what virtual node is, what react and redux is doing etc... You don't need to explain them in detail in class, but I think you should provide us more materials
+-What could I have done to help you more, presentation of material, design of inclass exercise, goals of projects  and be specific please:
+It is really helpful that you stay in the classroom and answer our questions.
+
+-What I want to say?
+I spent a really hard time to handle this course.I was really sufferred, I always worked until 2 o'clock just to finish the inclass exersice, but I think I am really luck to have your help, you are really patient and I really appreciate that. I have become more and more confident on this course and I think now I love web development so much. I will take this experience as a treasure in my life.
+Thank you Scott.
