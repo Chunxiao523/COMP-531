@@ -1,0 +1,5 @@
+{ 
+     "netid": "cz31",
+  "frontend": "http://lackadaisical-metal.surge.sh",
+   "backend": "https://hw-7.herokuapp.com"
+}

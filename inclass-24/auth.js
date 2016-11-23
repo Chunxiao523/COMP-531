@@ -2,7 +2,7 @@ const md5 = require('md5')
 const db = []
 const userdb = {username: '', salt: '', hash: ''}
 var cookieKey = 'sid'
-var redis = require('redis').createClient("redis://h:p73gojv2tftmckbvr7kuhbqt6ff@ec2-184-73-200-54.compute-1.amazonaws.com:11819")
+var redis = require('redis').createClient("redis://h:p91e4gm8m4ug46do2tsgosn468k@ec2-184-73-208-210.compute-1.amazonaws.com:11209")
 
 
 const putHeadlind = (req, res) => {
