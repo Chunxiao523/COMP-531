@@ -1,0 +1,8 @@
+Which presentation was the most polished and delivered, and why?
+The most polished and delivered presentation is about Backbone.js. I like this presentation because he have convinced me that this is a really useful framework, very easy to use even comparing with react.js. I am interested to try this framework. Also, his presentation and his slides are very clear and easy to understand.
+
+which topic did you learn the most from and what did you learn?
+Among these topics, I learnt most from "user experience". I think when I am designing my web application, sometimes, I focused too much on functionality and I ignored the user experience design. I learnt a lot from this topic since she provided the analysis with details and good explanations. I know what is a good user experience design and how to improve user experience from her speech. Such as accessible, fast speed,and desirable.
+
+which talk did you like the best and why?
+The talk that I like best is about CSS Frameworks. He mentioned several css frameworks which include bootstrap, foundation, and semantic UI. I like this talk best because he mentioned one key idea that is mobile first design. I think I should think more about mobile structures first when I am designing the layout of my application, because this is really important and this is something that I didn't realized before. 
