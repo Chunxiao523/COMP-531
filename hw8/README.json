@@ -1,5 +1,5 @@
 {
 	 "netid": "cz31",
    "frontend": "http://bawdy-crate.surge.sh/",
-   "backend": " https://hw-7.herokuapp.com/"
+   "backend": "https://hw-7.herokuapp.com/"
 }
