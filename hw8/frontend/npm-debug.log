@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'deploy' ]
+2 info using npm@3.10.8
+3 info using node@v6.8.0
+4 verbose run-script [ 'predeploy', 'deploy', 'postdeploy' ]
+5 info lifecycle starter@1.0.0~predeploy: starter@1.0.0
+6 silly lifecycle starter@1.0.0~predeploy: no script for predeploy, continuing
+7 info lifecycle starter@1.0.0~deploy: starter@1.0.0
+8 verbose lifecycle starter@1.0.0~deploy: unsafe-perm in lifecycle true
+9 verbose lifecycle starter@1.0.0~deploy: PATH: C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;D:\comp 531\hw8_frontend\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;F:\MAtalab\runtime\win64;F:\MAtalab\bin;F:\MAtalab\polyspace\bin;C:\Program Files (x86)\Skype\Phone\;C:\Python27;C:\Program Files\nodejs\;F:\Heroku\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\Program Files (x86)\Git\cmd;F:\CTEX\UserData\miktex\bin;F:\CTEX\MiKTeX\miktex\bin;F:\CTEX\CTeX\ctex\bin;F:\CTEX\CTeX\cct\bin;F:\CTEX\CTeX\ty\bin;F:\CTEX\Ghostscript\gs9.05\bin;F:\CTEX\GSview\gsview;F:\CTEX\WinEdt;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files\MiKTeX 2.9\miktex\bin\x64;C:\Users\Angel\AppData\Local\Microsoft\WindowsApps;C:\Python27;C:\Users\Angel\AppData\Roaming\npm
+10 verbose lifecycle starter@1.0.0~deploy: CWD: D:\comp 531\hw8_frontend
+11 silly lifecycle starter@1.0.0~deploy: Args: [ '/d /s /c', 'webpack -p && surge -p dist' ]
+12 info lifecycle starter@1.0.0~deploy: Failed to exec deploy script
+13 verbose stack Error: starter@1.0.0 deploy: `webpack -p && surge -p dist`
+13 verbose stack spawn C:\WINDOWS\system32\cmd.exe; C:\Python27 ENOENT
+13 verbose stack     at exports._errnoException (util.js:1026:11)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:193:32)
+13 verbose stack     at onErrorNT (internal/child_process.js:359:16)
+13 verbose stack     at _combinedTickCallback (internal/process/next_tick.js:74:11)
+13 verbose stack     at process._tickCallback (internal/process/next_tick.js:98:9)
+14 verbose pkgid starter@1.0.0
+15 verbose cwd D:\comp 531\hw8_frontend
+16 error Windows_NT 10.0.14393
+17 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "deploy"
+18 error node v6.8.0
+19 error npm  v3.10.8
+20 error file C:\WINDOWS\system32\cmd.exe; C:\Python27
+21 error path C:\WINDOWS\system32\cmd.exe; C:\Python27
+22 error code ELIFECYCLE
+23 error errno ENOENT
+24 error syscall spawn C:\WINDOWS\system32\cmd.exe; C:\Python27
+25 error starter@1.0.0 deploy: `webpack -p && surge -p dist`
+25 error spawn C:\WINDOWS\system32\cmd.exe; C:\Python27 ENOENT
+26 error Failed at the starter@1.0.0 deploy script 'webpack -p && surge -p dist'.
+26 error Make sure you have the latest version of node.js and npm installed.
+26 error If you do, this is most likely a problem with the starter package,
+26 error not with npm itself.
+26 error Tell the author that this fails on your system:
+26 error     webpack -p && surge -p dist
+26 error You can get information on how to open an issue for this project with:
+26 error     npm bugs starter
+26 error Or if that isn't available, you can get their info via:
+26 error     npm owner ls starter
+26 error There is likely additional logging output above.
+27 verbose exit [ 1, true ]
